@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+       <!-- font-awesome link-->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <!-- slick-slider-css -->
+       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.3.11/slick.css" />
+       <!-- link/css/stylesheet -->
+       <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <header id="masthead" class="site-header">
+        <div class="site-top-header">
+            <div class="container">
+                <div class="top-head">
+                    <ul class="left-top-head">
+                        <li><a href="">gobooo@gmail.com</a></li>
+                        <li><a href="">+12 345-645</a></li>
+                    </ul>
+                    <ul class="right-top-head">
+                        <li class="icons"><a href="" class="fa fa-facebook"></a></li>
+                        <li class="icons"><a href="" class="fa fa-twitter"></a></li>
+                        <li class="icons"><a href="" class="fa fa-google"></a></li>
+                        <li><a href="">Login</a></li>
+                        <li><a href="">Register</a></li>
+    
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="nav-contents-wrapper">
+            <div class="sub-container">
+                <nav id="site-navigation" class="main-navigation">
+                    <div class="site-branding">
+                        <a href="index.html"><img src="images/gobooo.png" alt="site-logo"></a>
+                    </div><!-- .site-branding -->
+                    <div class="nav-menu">
+                        <div class="close-btn"></div>
+                        <ul class="menu">
+                            <li class="menu-item active"><a href="#Home" class="">Home</a></li>
+                            <li class="menu-item"><a href="#women">Women</a></li>
+                            <li class="menu-item"><a href="#men">Men</a></li>
+                            <li class="menu-item"><a href="#children">Children</a></li>
+                            <li class="menu-item">
+                                <a href="#collection" class="sub-btn">Collection</a>
+                                <ul class="sub-menu">
+                                    <li class="sub-item"><a href="">Winter</a></li>
+                                    <li class="sub-item"><a href="">Summer</a></li>
+                                    <li class="sub-item"><a href="">Fall</a></li>
+                                    <li class="sub-item"><a href="">Spring</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!-- .nav-menu -->
+                    <div class="menu-btn"></div>
+    
+                </nav><!-- #site-navigation -->
+    
+            </div><!-- .sub-container--->
+        </div><!-- .nav-contents-wrapper -->
+    </header><!-- #masthead -->
+    <section class="bottom-navbar">
+        <div class="container">
+            <div class="left-nav">
+                <ul>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                </ul>
+            </div>
+            <div class="right-nav">
+                <ul>
+                    <li><a href="">ShoppingCard</a></li>
+                    <li><a href="">WishList</a></li>
+                    <li><a href="">Checkout</a></li>
+                    <li><a href="">My Account</a></li>
+                </ul>
+                <?php get_search_form(); ?>
+                <div class="cart-field">
+                    <div class="cart-inner">
+                        <a href=""><img src="images/cart.svg" alt="cart-icon"></a>
+                        <p>$79.99</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- .bottom-navbar -->
+    <section class="cart-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="thumbnail">
+                        <div class="slider-for">
+                            <div class="slider-container">
+                                <img src="images/menbannerimg.jpg" alt="sunset">
+                            </div>
+                            <div class="slider-container">
+                                <img src="images/menbannerimg.jpg" alt="sunset">
+                            </div>
+                            <div class="slider-container">
+                                <img src="images/menbannerimg.jpg" alt="sunset">
+                            </div>
+                            <div class="slider-container">
+                                <img src="images/menbannerimg.jpg" alt="sunset">
+                            </div>
+                            <div class="slider-container">
+                                <img src="images/menbannerimg.jpg" alt="sunset">
+                            </div>
+                        </div>
+                        <div class="thumbnail-inner slider-nav">
+                            <div class="img-content">
+                                <a href="#!"><img src="images/menbannerimg.jpg" alt="sunset"></a>
+                            </div>
+                            <div class="img-content">
+                                <a href="#!"><img src="images/menbannerimg.jpg" alt="sunset"></a>
+                            </div>
+                            <div class="img-content">
+                                <a href="#!"><img src="images/menbannerimg.jpg" alt="sunset"></a>
+                            </div>
+                            <div class="img-content">
+                                <a href="#!"><img src="images/menbannerimg.jpg" alt="sunset"></a>
+                            </div>
+                            <div class="img-content">
+                                <a href="#!"><img src="images/menbannerimg.jpg" alt="sunset"></a>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="col-lg-6">
+                    <div class="cart-contents">
+                        <div class="product-title">
+                            <h3>Winter Collection - Paris Jacket</h3>
+                        </div>
+                        <div class="product-price">$89,99</div>
+                        <div class="product-dimension">
+                            <div class="size select">
+                                <select name="size" id="size">
+                                    <option value="Size">Size</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                    <option value="XXL">XXL</option>
+                                </select>
+                            </div>
+                            <div class="quantity select">
+                                <label for="quantity">QTY </label>
+                                <select name="quantity" id="quantity">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                            <div class="color-picker">
+                                <label for="color-picker">Color</label>
+                                <div class="color-picker-inner">
+                                    <input type="radio" id="purple" name="color">
+                                    <input type="radio" id="green" name="color">
+                                    <input type="radio" id="light-brown" name="color">
+                                    <input type="radio" id="gray" name="color">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn cart-btn">BUY THIS ITEM</button>
+                        <div class="accordion" id="myaccordion">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            DETAILS
+                                        </button>
+                                    </h2>
+                                </div>
+    
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#myaccordion">
+                                    <div class="card-body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis perspiciatis ipsum voluptatum eligendi libero, fuga ratione assumenda? Saepe, perferendis accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Iure.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            DELIVERY
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#myaccordion">
+                                    <div class="card-body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis perspiciatis ipsum voluptatum eligendi libero, fuga ratione assumenda? Saepe, perferendis accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Iure.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            STYLE
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#myaccordion">
+                                    <div class="card-body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis perspiciatis ipsum voluptatum eligendi libero, fuga ratione assumenda? Saepe, perferendis accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Iure.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingFour">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                            STYLE
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#myaccordion">
+                                    <div class="card-body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis perspiciatis ipsum voluptatum eligendi libero, fuga ratione assumenda? Saepe, perferendis accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Iure.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- .cart-section -->
+    <section class="recommend-product">
+        <div class="container">
+            <div class="section-title">
+                <h3>Similar Items</h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card-contents">
+                        <div class="card-thumbnail">
+                            <a href=""><img src="images/boot.jpg" alt="boot"></a>
+                        </div>
+                        <div class="card-inner-content">
+                            <h3><a href="">Paris Jacket</a></h3>
+                            $89,99
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card-contents">
+                        <div class="card-thumbnail">
+                            <a href=""><img src="images/grung.jpg" alt="grung"></a>
+                        </div>
+                        <div class="card-inner-content">
+                            <h3><a href="">Paris Jacket</a></h3>
+                            $89,99
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card-contents">
+                        <div class="card-thumbnail">
+                            <a href=""><img src="images/longjacket.jpg" alt="longjacket"></a>
+                        </div>
+                        <div class="card-inner-content">
+                            <h3><a href="">Paris Jacket</a></h3>
+                            $89,99
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card-contents">
+                        <div class="card-thumbnail">
+                            <a href=""><img src="images/blacksweatshirt.jpg" alt="blacksweatshirt"></a>
+                        </div>
+                        <div class="card-inner-content">
+                            <h3><a href="">Paris Jacket</a></h3>
+                            $89,99
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- .recommend-product -->
+    <footer id="colophon" class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="inner-contents">
+                        <a href=""><img src="images/story.png" alt="site-logo"></a>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Eos cupiditate aspernatur illo nisi sapiente pariatur eum expedita ipsum culpa. Placeat.</p>
+                        <p>Created by Graphberry,Belgrade,Serbia</p>
+                        <p>&copy; 2017 - <span>Gabooo</span>.inc</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-menu">
+                        <h3>Links</h3>
+                        <ul>
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Sign In</a></li>
+                            <li><a href="">Register</a></li>
+                            <li><a href="">FAQ</a></li>
+                            <li><a href="">Support</a></li>
+                            <li><a href="">Terms and Condition</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-menu">
+                        <h3>Shopping</h3>
+                        <ul>
+                            <li><a href="">Shopping Cart</a></li>
+                            <li><a href="">Winter</a></li>
+                            <li><a href="">Spring</a></li>
+                            <li><a href="">Summer</a></li>
+                            <li><a href="">Fall</a></li>
+                            <li><a href="">Collection</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-contact">
+                        <h3>Contact Us</h3>
+                        <p>Get in touch with us via mail phone. We are waiting for your call or message</p>
+                        <a href="" class="btn footer-btn">graphberry@gmail.com</a>
+                        <div class="footer-icons">
+                            <a href=""> <i class="fa fa-facebook"></i></a>
+                            <a href=""> <i class="fa fa-twitter"></i></a>
+                            <a href=""> <i class="fa fa-google"></i></a>
+                            <a href=""> <i class="fa fa-dribbble"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer><!-- #colophon -->
+    <!-- JQUERy -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- slick-slider js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+
+    <!-- main.js -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- bootstrap min js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+</body>
+</html>

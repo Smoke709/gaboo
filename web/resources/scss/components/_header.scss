@@ -1,0 +1,290 @@
+.site-header {
+    position: relative;
+
+    .site-top-header {
+        background-color: $color-black;
+    }
+
+    .top-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 20px 0;
+        font-family: $font-top-head;
+        font-size: 12px;
+
+        @include breakpoint (smaller) {
+            justify-content: center;
+        }
+
+        >ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+
+            li {
+                margin: 0 25px;
+                line-height: 25px;
+
+                &:first-child {
+                    margin-left: 0;
+                   @include breakpoint (smaller){
+                    margin-left: 25px;
+                   }
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                    @include breakpoint (smaller){
+                        margin-right: 25px;
+                       }
+                }
+
+                a {
+                    color: $color-white;
+                    text-decoration: none;
+                    transition: 0.4s;
+
+                    &:hover {
+                        color: $hover-color;
+                    }
+                }
+            }
+
+            .icons {
+                margin: 0 15px;
+            }
+
+            @include breakpoint (smaller) {
+                margin: 0 0 20px;
+            }
+
+        }
+
+    }
+
+    .nav-contents-wrapper {
+        background-color: $color-white;
+        position: relative;
+    }
+
+    .sub-container {
+        padding: 30px 15px;
+
+        .main-navigation {
+            // position: relative;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: auto;
+
+            .site-branding {
+                a {
+                    display: block;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+            ul {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0;
+                list-style: none;
+                line-height: 30px;
+              
+                //sub-menu
+                ul {
+                    position: absolute;
+                    right: 0;
+                    display: block;
+                    background-color: $banner-sec-color;
+                    padding: 10px 20px;
+                    opacity: 0;
+                    pointer-events: none;
+                    transform: translateY(20px);
+                    transition: 0.4s;
+                    z-index: 1;
+                    line-height: 30px;
+                    box-shadow: 0px 0px 6px 0px $sub-menu-bg-color;
+                    border-radius: 0 0 0 10px;
+
+                    li {
+                        margin: 0;
+
+                        &:hover {
+                            a {
+                                color: $hover-color;
+                            }
+                        }
+                        @include breakpoint (small){
+                            line-height: 50px;
+                        }
+                    }
+
+                    @include breakpoint (small) {
+                        opacity: 1;
+                        position: relative;
+                        top: 0;
+                        transform: translateX(0px);
+                        background: rgba(255, 255, 255, 0.1);
+                        box-shadow: none;
+                        border-radius: 5px;
+                        overflow: hidden;
+                        display: none;
+                        transition: none;
+                    }
+
+                }
+
+                li {
+                    position: relative;
+                    margin: 0 30px;
+                    outline: 0;
+                    border: 0;
+                    cursor: pointer;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    a {
+                        font-family: $font-top-head;
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: $bottom-nav-bg;
+                        text-decoration: none;
+                        outline: 0;
+                        transition: 0.4s;
+                    }
+                    &:hover{
+                        > a{
+                                color: $hover-color;
+                        }
+                    }
+
+                    /* active menu-item*/
+                    &.active {
+                        a {
+                            color: $hover-color;
+                        }
+                    }
+
+                    &.menu-item {
+                        &:hover {
+                            .sub-menu {
+                                opacity: 1;
+                                pointer-events: all;
+                                transform: translateY(0);
+                            }
+                        }
+                    }
+
+                }
+
+                //sub-menu
+
+
+            }
+
+            .nav-menu {
+                @include breakpoint (small) {
+                    position: fixed;
+                    top: 0;
+                    right: -100%;
+                    background-color: #3e3e3e;
+                    z-index: 1;
+                    max-width: 380px;
+                    width: 100%;
+                    height: 100vh;
+                    padding: 90px 50px;
+                    overflow-y: auto;
+                    visibility: hidden;
+                    pointer-events: none;
+                    transition: 0.4s;
+
+                    .menu {
+                        display: block;
+                        line-height: 70px;
+
+                        li {
+                            margin: 0;
+
+                            a {
+                                color: $color-white;
+
+                                &:hover {
+                                    color: $hover-color;
+                                }
+                            }
+                        }
+                    }
+
+                    .close-btn {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background-image: url('../../images/close.png');
+                        // background-color: red;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        height: 30px;
+                        width: 30px;
+                        margin: 25px;
+                        cursor: pointer;
+
+                        &:hover {
+                            opacity: 0.5;
+                        }
+                    }
+
+                }
+            }
+
+            .menu-btn {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-image: url('../../images/menubar.svg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 50px;
+                width: 50px;
+                margin: 25px;
+                cursor: pointer;
+                display: none;
+                transform: rotate(-90deg);
+
+                &:hover {
+                    opacity: 0.7;
+                }
+
+                @include breakpoint (small) {
+                    display: block;
+                }
+
+            }
+
+            //slide responsive nav
+            .slidenav {
+                visibility: visible;
+                pointer-events: all;
+                right: 0;
+            }
+
+        }
+
+    }
+}
